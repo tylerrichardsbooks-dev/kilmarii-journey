@@ -19,7 +19,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+        display: ['Cinzel', 'Georgia', 'serif'],
+        decorative: ['Cinzel Decorative', 'Georgia', 'serif'],
         body: ['Raleway', '-apple-system', 'sans-serif'],
       },
       colors: {
