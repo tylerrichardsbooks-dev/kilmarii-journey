@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -13,6 +18,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+        body: ['Raleway', '-apple-system', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +56,26 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom ocean palette
+        ocean: {
+          deep: "hsl(var(--ocean-deep))",
+          dark: "hsl(var(--ocean-dark))",
+          medium: "hsl(var(--ocean-medium))",
+          light: "hsl(var(--ocean-light))",
+        },
+        gold: {
+          warm: "hsl(var(--gold-warm))",
+          muted: "hsl(var(--gold-muted))",
+          glow: "hsl(var(--gold-glow))",
+        },
+        stone: {
+          dark: "hsl(var(--stone-dark))",
+          medium: "hsl(var(--stone-medium))",
+          light: "hsl(var(--stone-light))",
+        },
+        earth: {
+          brown: "hsl(var(--earth-brown))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -65,25 +94,58 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        mist: {
+          "0%, 100%": { opacity: "0.3", transform: "translateX(-5%)" },
+          "50%": { opacity: "0.6", transform: "translateX(5%)" },
+        },
+        wave: {
+          "0%, 100%": { transform: "translateY(0) scaleY(1)" },
+          "50%": { transform: "translateY(-10px) scaleY(1.05)" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { opacity: "0.6" },
+          "50%": { opacity: "1" },
+        },
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(30px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        float: "float 6s ease-in-out infinite",
+        mist: "mist 20s ease-in-out infinite",
+        wave: "wave 8s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 4s ease-in-out infinite",
+        "fade-up": "fade-up 0.8s ease-out forwards",
+        shimmer: "shimmer 3s linear infinite",
+      },
+      backgroundImage: {
+        "gradient-ocean": "linear-gradient(180deg, hsl(220 45% 6%) 0%, hsl(220 40% 12%) 50%, hsl(205 40% 18%) 100%)",
+        "gradient-gold": "linear-gradient(135deg, hsl(42 35% 40%) 0%, hsl(42 60% 50%) 50%, hsl(42 70% 60%) 100%)",
+        "gradient-mist": "linear-gradient(180deg, transparent 0%, hsl(220 45% 6% / 0.8) 100%)",
+      },
+      boxShadow: {
+        "gold-glow": "0 0 30px -5px hsla(42, 60%, 50%, 0.4)",
+        "gold-glow-lg": "0 0 50px -5px hsla(42, 60%, 50%, 0.5)",
+        "card": "0 8px 32px -8px hsla(220, 45%, 6%, 0.8)",
+        "elevated": "0 25px 50px -12px hsla(220, 45%, 6%, 0.9)",
       },
     },
   },
