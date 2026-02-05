@@ -48,7 +48,7 @@ export default function BuySection() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
-          {/* Book Display */}
+          {/* Book Display - UPSCALED */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -56,11 +56,14 @@ export default function BuySection() {
             className="flex justify-center"
           >
             <div className="relative">
-              <div className="absolute -inset-8 bg-gold-warm/10 rounded-full blur-3xl animate-glow-pulse" />
+              <div className="absolute -inset-12 bg-gold-warm/15 rounded-full blur-3xl animate-glow-pulse" />
               <img 
                 src={bookCover} 
                 alt="Kilmarii: The Wayfinder" 
-                className="relative w-56 md:w-64 h-auto rounded-sm shadow-gold-glow"
+                className="relative w-72 md:w-80 lg:w-96 h-auto rounded-sm shadow-gold-glow-lg"
+                style={{
+                  boxShadow: '10px 10px 40px rgba(0,0,0,0.5), -3px -3px 15px rgba(182,145,72,0.2)'
+                }}
               />
             </div>
           </motion.div>

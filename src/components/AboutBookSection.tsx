@@ -63,7 +63,7 @@ export default function AboutBookSection() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* Book Cover */}
+          {/* Book Cover - UPSCALED */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -71,19 +71,22 @@ export default function AboutBookSection() {
             className="relative flex justify-center"
           >
             <div className="relative group">
-              {/* Glow effect */}
-              <div className="absolute -inset-10 bg-gold-warm/10 blur-3xl rounded-full opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
+              {/* Glow effect - enhanced */}
+              <div className="absolute -inset-16 bg-gold-warm/15 blur-3xl rounded-full opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
               
-              {/* Book with shadow */}
+              {/* Book with shadow - UPSCALED */}
               <div className="relative">
                 <img 
                   src={bookCover} 
                   alt="Kilmarii: The Wayfinder - Book Cover" 
-                  className="w-72 md:w-80 lg:w-96 h-auto rounded-sm shadow-elevated"
+                  className="w-80 md:w-[420px] lg:w-[480px] h-auto rounded-sm shadow-gold-glow-lg"
                   loading="lazy"
+                  style={{
+                    boxShadow: '12px 12px 50px rgba(0,0,0,0.5), -4px -4px 20px rgba(182,145,72,0.2)'
+                  }}
                 />
                 {/* Spine highlight */}
-                <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-r from-gold-muted/30 to-transparent" />
+                <div className="absolute left-0 top-0 bottom-0 w-3 bg-gradient-to-r from-gold-muted/40 to-transparent" />
               </div>
             </div>
           </motion.div>

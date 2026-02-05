@@ -76,7 +76,7 @@ export default function HeroSection() {
             and the path you were born to walk.
           </motion.p>
 
-          {/* Book Mockup */}
+          {/* Book Mockup - UPSCALED */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -84,18 +84,18 @@ export default function HeroSection() {
             className="relative mb-12"
           >
             <div className="relative animate-float">
-              {/* Book Shadow */}
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-40 h-8 bg-ocean-deep/80 blur-2xl rounded-full" />
+              {/* Book Shadow - larger */}
+              <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-64 h-12 bg-ocean-deep/80 blur-3xl rounded-full" />
               
-              {/* Book Cover with 3D Effect */}
+              {/* Book Cover with 3D Effect - UPSCALED */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gold-warm/20 blur-3xl rounded-lg transform group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute -inset-8 bg-gold-warm/15 blur-3xl rounded-lg transform group-hover:scale-110 transition-transform duration-700" />
                 <img 
                   src={bookCover} 
                   alt="Kilmarii: The Wayfinder - Book Cover" 
-                  className="relative w-48 md:w-56 lg:w-64 h-auto rounded-sm shadow-gold-glow transform perspective-1000 hover:scale-105 transition-transform duration-500"
+                  className="relative w-64 md:w-80 lg:w-96 h-auto rounded-sm shadow-gold-glow-lg transform perspective-1000 hover:scale-105 transition-transform duration-500"
                   style={{
-                    boxShadow: '8px 8px 30px rgba(0,0,0,0.5), -2px -2px 10px rgba(182,145,72,0.2)'
+                    boxShadow: '12px 12px 40px rgba(0,0,0,0.6), -3px -3px 15px rgba(182,145,72,0.25)'
                   }}
                 />
               </div>
